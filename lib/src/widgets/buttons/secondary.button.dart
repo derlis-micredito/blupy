@@ -10,7 +10,7 @@ class SecondaryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 8,horizontal: 24),
+      margin: const EdgeInsets.symmetric(vertical: 6,horizontal: 24),
       constraints: const BoxConstraints(
         minWidth: 320,
       ),
@@ -29,7 +29,7 @@ class SecondaryButton extends StatelessWidget {
           ),
           
         ),
-        child:  Text(text, style: GoogleFonts.poppins( textStyle: TextStyle(fontSize: 14, color: Constantes.primaryColor)  )),
+        child:  Text(text, style: GoogleFonts.poppins( textStyle: TextStyle(fontSize: 15, color: Constantes.primaryColor)  )),
       ),
     );
   }

@@ -1,5 +1,5 @@
 import 'package:blupy/src/providers/auth.provider.dart';
-import 'package:blupy/src/screens/screens.dart';
+import 'package:blupy/src/routes/routes.main.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -19,10 +19,7 @@ class MainApp extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: 'login',
-      routes: {
-        'login':(context) => const LoginScreen(),
-        'olvide':(context) => const OlvideScreen(),
-      },
+      routes: RoutesMain().rutas(context),
     );
   }
 }

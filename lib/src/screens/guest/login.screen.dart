@@ -97,7 +97,10 @@ class _LoginScreenState extends State<LoginScreen> {
           errorPassword = '';
           _isLoading = true;
         });
-      //control.trylogin();
+      control.trylogin();
+      setState(() {
+        _isLoading = false;
+      });
     }
 
     return Expanded(
@@ -108,33 +111,35 @@ class _LoginScreenState extends State<LoginScreen> {
             color: Colors.white,
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
-        child: Column(
-          children: [
-            PrimaryField(
-              label: "Número de cédula",
-              controller: control.idNumber,
-              errorText: errorCedula.isEmpty ? null : errorCedula ,
-            ),
-            PasswordField(
-              label: "Contraseña",
-              errorText:errorPassword.isEmpty ? null :errorPassword ,
-              controller: control.password,
-            ),
-            TextLink('Olvide mi contraseña', onTap: () {
-              Navigator.pushNamed(context, 'olvide');
-            }),
-            PrimaryButton(
-              text: 'INGRESAR',
-              onTap: login,
-            ),
-            SecondaryButton(
-              text: 'REGISTRARME',
-              onTap: () {
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              PrimaryField(
+                label: "Número de cédula",
+                controller: control.idNumber,
+                errorText: errorCedula.isEmpty ? null : errorCedula ,
+              ),
+              PasswordField(
+                label: "Contraseña",
+                errorText:errorPassword.isEmpty ? null :errorPassword ,
+                controller: control.password,
+              ),
+              TextLink('Olvide mi contraseña', onTap: () {
                 Navigator.pushNamed(context, 'olvide');
-              },
-            ),
-            const SubTitleSecondary('Mi Crédito S.A. ${Constantes.versionApp}')
-          ],
+              }),
+              PrimaryButton(
+                text: 'INGRESAR',
+                onTap: login,
+              ),
+              SecondaryButton(
+                text: 'REGISTRARME',
+                onTap: () {
+                  Navigator.pushNamed(context, 'registerA');
+                },
+              ),
+              const SubTitleSecondary('Mi Crédito S.A. ${Constantes.versionApp}')
+            ],
+          ),
         ),
       ),
     );

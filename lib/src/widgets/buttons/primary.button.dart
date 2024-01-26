@@ -9,7 +9,7 @@ class PrimaryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 8,horizontal: 24),
+      margin: const EdgeInsets.symmetric(vertical: 6,horizontal: 24),
       constraints: const BoxConstraints(
         minWidth: 320,
       ),
@@ -22,7 +22,7 @@ class PrimaryButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(6)
           )
         ),
-        child:  Text(text, style: GoogleFonts.poppins( textStyle: const TextStyle(fontSize: 14, color: Colors.white)  )),
+        child:  Text(text, style: GoogleFonts.poppins( textStyle: const TextStyle(fontSize: 15, color: Colors.white)  )),
       ),
     );
   }
