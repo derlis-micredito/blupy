@@ -12,7 +12,7 @@ class SecondaryButton extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 8,horizontal: 24),
       constraints: const BoxConstraints(
-        maxWidth: 480,
+        minWidth: 320,
       ),
 
       child: ElevatedButton(

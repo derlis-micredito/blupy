@@ -12,4 +12,6 @@ class Constantes {
 
   static const String xApiKey ='643fece24fd4a1';
 
+  static const String versionApp ="1.6.0";
+
 }
